@@ -80,7 +80,7 @@ a.note {
   width: 30px;
 }
 /* PC/タブレット横 */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   ul {
     display: flex;
     justify-content: baseline;
@@ -95,8 +95,8 @@ a.note {
     margin: 10px 12px 10px 12px;
   }
   #logo {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
   }
   .linkBox {
@@ -192,7 +192,7 @@ a.note {
     margin-bottom: 5px;
   }
   button {
-    font-size: 20%;
+    font-size: 10px;
   }
   #returnTop {
     border-radius: 20px/20px;
@@ -207,7 +207,7 @@ a.note {
   .copyRight {
     color: lightgray;
     margin-top: 70px;
-    font-size: 50%;
+    font-size: 8px;
     display: flex;
     justify-content: center;
   }
