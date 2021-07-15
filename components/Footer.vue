@@ -18,7 +18,7 @@
       <li>
         <a
           class="link"
-          href="https://c3-open-campus-2021.netlify.app/"
+          href="https://compositecomputer.club/"
           target="_blank"
         >
           C3 Official Website<img src="../static/iconLink.png" />
