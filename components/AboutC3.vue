@@ -48,11 +48,11 @@
 }
 .titleLine {
   margin: 0 auto 0 7%;
-  width: 75%;
-  height: max(6vw, 35px);
+  width: 80%;
+  height: max(7vw, 35px);
   background-color: #ff2;
   position: absolute;
-  top: calc(max(18vw, 70px) - max(6vw, 35px));
+  bottom: 0;
   z-index: 1;
 }
 .main {
