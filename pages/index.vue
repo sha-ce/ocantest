@@ -2,7 +2,6 @@
   <div class="back">
     <Menu/>
     <div class="back1" id="back1">
-    HOME
     </div>
     <AboutC3/>
     <MyMessage/>
@@ -38,9 +37,6 @@ export default {
 .back1 {
   background: lightcyan;
   height: 1080px;
-  color: black;
-  font-size: 500%;
-  padding: 50px 0 0 350px;
 }
 .back2 {
   background: lightpink;
