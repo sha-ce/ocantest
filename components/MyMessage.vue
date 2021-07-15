@@ -64,7 +64,7 @@
     display: flex;
   }
   .mainContent {
-    margin: 0 15px;
+    margin: 0 30px;
     display: inline-block;
   }
 }
