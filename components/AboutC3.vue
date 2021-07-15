@@ -35,6 +35,7 @@
 }
 .titleWrap {
   position: relative;
+  height: max(18vw, 70px);
 }
 .titleContent {
   margin: 0 auto 0 8%;
@@ -67,14 +68,14 @@
 /* スマホ以上 */
 @media screen and (min-width: 481px) {
   .main {
-    padding: 22vw 8% 10vh 0;
+    padding: 8vw 8% 10vh 0;
     margin: 0 auto 0 18vw;
   }
 }
 /* スマホ幅 */
 @media screen and (max-width: 481px) {
   .main {
-    padding: 20vh 0 10vh 0;
+    padding: 8vh 0 10vh 0;
     margin: 0 auto;
     display: flex;
   }
