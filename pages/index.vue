@@ -5,7 +5,6 @@
     HOME
     </div>
     <AboutC3/>
-    <Message/>
     <MyMessage/>
     <div class="back2" id="back2">
     </div>
@@ -23,7 +22,6 @@
 import Footer from '~/components/Footer.vue'
 import Menu from '~/components/Menu.vue'
 import AboutC3 from '~/components/AboutC3.vue'
-import Message from '~/components/Message.vue'
 import MyMessage from '~/components/MyMessage.vue'
 
 export default {
@@ -31,7 +29,6 @@ export default {
     Menu,
     Footer,
     AboutC3,
-    Message,
     MyMessage
   }
 }
