@@ -36,15 +36,12 @@
   color: #456586;
   font-size: max(15vw, 60px);
   font-weight: bold;
-  border-bottom: #FFFF22 solid max(7vw, 20px);
+  border-bottom: solid max(7vw, 20px) #FFFF22;
   display: inline-block;
   height: max(18vw, 70px);
 }
 .main {
   background-color: #FAFAFA;
-  padding: 8vh 8% 10vh 0;
-  margin: 0 auto 0 18vw;
-  text-align: left;
 }
 .mainContent {
   background-color: #FAFAFA;
@@ -52,5 +49,24 @@
   color: #4A4A4A;
   font-size: max(2vw, 13px);
   line-height: max(4vw, 20px);
+}
+/* スマホ以上 */
+@media screen and (min-width: 481px) {
+  .main {
+    padding: 8vh 8% 10vh 0;
+    margin: 0 auto 0 18vw;
+  }
+}
+/* スマホ幅 */
+@media screen and (max-width: 481px) {
+  .main {
+    padding: 8vh 0 10vh 0;
+    margin: 0 auto;
+    display: flex;
+  }
+  .mainContent {
+    margin: 0 auto;
+    display: inline-block;
+  }
 }
 </style>
