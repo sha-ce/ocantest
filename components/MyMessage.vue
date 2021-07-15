@@ -25,7 +25,7 @@
   color: #456586;
   font-size: max(15vw, 60px);
   font-weight: bold;
-  width: 100%;
+  width: 80%;
   height: max(18vw, 70px);
   z-index: 10;
   position: absolute;
@@ -64,7 +64,7 @@
     display: flex;
   }
   .mainContent {
-    margin: 0 auto;
+    margin: 0 15px;
     display: inline-block;
   }
 }
