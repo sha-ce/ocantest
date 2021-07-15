@@ -16,22 +16,22 @@
           <li><p>作品を見る</p></li>
           <li>
             <div class="list">
-              <a href="../_commmunity/game/">GAME</a>
+              <a href="../commmunity/game/">GAME</a>
             </div>
           </li>
           <li>
             <div class="list">
-              <a href="../_commmunity/cg/">CG</a>
+              <a href="../commmunity/cg/">CG</a>
             </div>
           </li>
           <li>
             <div class="list">
-              <a href="../_commmunity/hack/">HACK</a>
+              <a href="../commmunity/hack/">HACK</a>
             </div>
           </li>
           <li>
             <div class="list">
-              <a href="../_commmunity/media_art/">MEDIA_ART</a>
+              <a href="../commmunity/media_art/">MEDIA_ART</a>
             </div>
           </li>
         </ul>
