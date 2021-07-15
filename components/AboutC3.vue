@@ -36,7 +36,7 @@
   color: #456586;
   font-size: max(15vw, 60px);
   font-weight: bold;
-  border-bottom: solid max(15vw, 20px) #FFFF22;
+  border-bottom: #FFFF22 solid max(7vw, 20px);
   display: inline-block;
   height: max(18vw, 70px);
 }
