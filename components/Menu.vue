@@ -103,7 +103,8 @@ export default {
   transition: 0.3s ease;
 }
 .nav-content {
-  padding: 100px 0 0 30px;
+  margin: 0;
+  padding: 100px 0 0 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -174,7 +175,7 @@ ul {
     left: 20px;
   }
   .nav-content {
-    width: 40%;
+    width: 300px;
   }
 }
 /* スマホ幅 */
@@ -184,7 +185,7 @@ ul {
     left: 10px;
   }
   .nav-content {
-    width: 90%;
+    width: 80%;
   }
 }
 </style>
