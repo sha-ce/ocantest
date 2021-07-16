@@ -74,8 +74,6 @@ export default {
 <style scoped>
 .button {
   position: fixed;
-  top: 20px;
-  left: 20px;
   cursor: pointer;
   z-index: 100;
   padding: 10px;
@@ -109,7 +107,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 90%;
   height: 100%;
   background: #4a4a4a;
   pointer-events: auto;
@@ -169,5 +166,25 @@ a {
 ul {
   padding: 0;
   list-style: none;
+}
+/* スマホ以上 */
+@media screen and (min-width: 481px) {
+  .button {
+    top: 20px;
+    left: 20px;
+  }
+  .nav-content {
+    width: 40%;
+  }
+}
+/* スマホ幅 */
+@media screen and (max-width: 480px) {
+  .button {
+    top: 10px;
+    left: 10px;
+  }
+  .nav-content {
+    width: 90%;
+  }
 }
 </style>
