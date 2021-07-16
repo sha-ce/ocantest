@@ -1,12 +1,58 @@
 <template>
   <div>
+    <!-- ハンバーガーメニューのボタン -->
     <div class="button" @click="ActiveBtn=!ActiveBtn">
-      <span class="icon-bar" :class="{'icon-bar':ActiveBtn}"></span>
-      <span class="icon-bar" :class="{'icon-bar':ActiveBtn}"></span>
-      <span class="icon-bar" :class="{'icon-bar':ActiveBtn}"></span>
+      <span class="icon-bar line-1" :class="{'close-1':ActiveBtn}"></span>
+      <span class="icon-bar line-2" :class="{'close-2':ActiveBtn}"></span>
+      <span class="icon-bar line-3" :class="{'close-3':ActiveBtn}"></span>
     </div>
+    <!-- サイドメニュー -->
     <transition name="slide">
-      <div class="change" v-show="ActiveBtn">この文字が切り替わるはず</div>
+      <div class="nav-content" v-show="ActiveBtn">
+          <ul>
+            <li>
+              <div class="home">
+                <a href="/">
+                  <font-awesome-icon class="icon" icon="home" />
+                  HOME
+                </a>
+              </div>
+            </li>
+            <li><p>作品を見る</p></li>
+            <li>
+              <div class="list">
+                <a href="linkUrl1">
+                  <font-awesome-icon class="icon" icon="gamepad" />
+                  GAME
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list">
+                <a href="linkUrl2">
+                  <font-awesome-icon class="icon" :icon="['far', 'images']" />
+                  CG
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list">
+                <a href="linkUrl3">
+                  <font-awesome-icon class="icon" icon="laptop-code" />
+                  HACK
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list">
+                <a href="linkUrl4">
+                  <font-awesome-icon class="icon" icon="palette" />
+                  MEDIA_ART
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
     </transition>
   </div>
 </template>
@@ -27,25 +73,101 @@ export default {
 
 <style scoped>
 .button {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  border: solid 1px black;
+  position: fixed;
+  top: 20px;
+  left: 20px;
   cursor: pointer;
   z-index: 100;
+  padding: 10px;
 }
-.change {
-  position: absolute;
-  padding-top: 50px;
-  background-color: gray;
-  max-width: 80%;
+.icon-bar {
+  display: block;
+  width: max(4vh, 20px);
+  height: 2px;
+  background: lightgray;
+}
+.icon-bar + .icon-bar {
+  margin-top: 8px;
+}
+.line-1, .line-2, .line-3 {
+  transition: 0.3s ease;
+}
+.close-1 {
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+  transition: 0.3s ease;
+}
+.close-2 {
+  transition: 0.3s ease;
+  opacity: 0;
+}
+.close-3 {
+  transform: translate3d(0, -10px, 0) rotate(45deg);
+  transition: 0.3s ease;
+}
+.nav-content {
+  padding: 100px 0 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background: #4a4a4a;
+  pointer-events: auto;
+  flex-direction: column;
+  z-index: 99;
 }
 .slide-enter-active, .slide-leave-active {
-  transform: translate(0px, 0px); 
-  transition: transform 225ms cubic-bezier(0.2, 1, 0.2, 1) 0ms;
+  transform: translate(0px, 0px);
+  transition: 0.4s ease;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateY(0) translateX(-100%);
+  transition: 0.4s ease;
+}
+.home {
+  margin-bottom: 10px;
+}
+.list {
+  padding-left: 20px;
+}
+.home,
+.list {
+  display: flex;
+}
+.icon {
+  color: white;
+  font-size: 15px;
+}
+.nav-content li a,
+.nav-content li p {
+  padding: 5px 5px;
+  display: block;
+  text-transform: uppercase;
+  transition: color 0.1s;
+  color: white;
+  font-size: max(5%, 20px);
 }
 
-.slide-enter, .slide-leave-to {
-  transform: translateY(0) translateX(-100vh);
+.nav-content li a:hover {
+  opacity: 0.6;
+}
+.nav-container:focus-within .nav-content {
+  transform: none;
+}
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
+}
+a {
+  color: currentColor;
+  transition: 0.2s ease-in-out;
+}
+ul {
+  padding: 0;
+  list-style: none;
 }
 </style>
