@@ -126,6 +126,7 @@ a.note {
     position: absolute;
     right: 8%;
     top: 20%;
+    -webkit-overflow-scrolling: touch;
   }
   .copyRight {
     color: lightgray;
@@ -227,10 +228,9 @@ export default {
   },
   methods: {
     returnTop() {
-      window.scrollIntoView({
+      window.scrollTo({
         top: 0,
         behavior: "smooth",
-        block: 'start'
       });
     },
   },
