@@ -227,9 +227,10 @@ export default {
   },
   methods: {
     returnTop() {
-      window.scrollTo({
+      window.scrollIntoView({
         top: 0,
         behavior: "smooth",
+        block: 'start'
       });
     },
   },
