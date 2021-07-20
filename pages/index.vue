@@ -13,6 +13,7 @@
     </div>
     <div class="back5" id="back5">
     </div>
+    <Footer2/>
     <Footer/>
   </div>
 </template>
@@ -22,13 +23,15 @@ import Footer from '~/components/Footer.vue'
 import Menu from '~/components/Menu.vue'
 import AboutC3 from '~/components/AboutC3.vue'
 import MyMessage from '~/components/MyMessage.vue'
+import Footer2 from '~/components/Footer2.vue'
 
 export default {
   components: {
     Menu,
     Footer,
     AboutC3,
-    MyMessage
+    MyMessage,
+    Footer2
   }
 }
 </script>
