@@ -1,5 +1,7 @@
 <template>
-  <div class="wrap">
+<div class="wrap">
+<transition name="fade">
+  <div v-show="visible">
     <div class="titleWrap">
       <div class="titleContent">About C3</div>
       <div class="titleLine"></div>
@@ -27,9 +29,46 @@
       </div>
     </div>
   </div>
+</transition>
+</div>
 </template>
 
+<script>
+export default ({
+  data() {
+    return {
+      visible: false
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.scrollY = window.scrollY;
+      if (!this.visible) {
+        this.visible = window.scrollY > 500;
+      } else if (window.scrollY < 499) {
+        this.visible = !this.visible;
+      }
+    },
+  },
+})
+</script>
+
+
 <style scoped>
+/* animation */
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 2s ease;
+}
+.fade-enter, .fade-leave-to {
+  transform: translateY(10%);
+  opacity: 0;
+}
+
+/* style */
 .wrap {
   background-color: #FAFAFA;
 }
