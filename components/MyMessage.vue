@@ -1,5 +1,5 @@
 <template>
-<div class="wrap">
+<div class="wrap" ref="target">
 <transition name="fade">
   <div v-show="visible" class="wrap">
     <div class="titleWrap">
@@ -28,10 +28,15 @@ export default ({
   },
   methods: {
     handleScroll() {
-      this.scrollY = window.scrollY;
+      const elementY = this.$refs.target.getBoundingClientRect().top;
+      const y = window.pageYOffset;
+      console.log({
+        y: y,
+        elementY: elementY
+      });
       if (!this.visible) {
-        this.visible = window.scrollY > 1800;
-      } else if (window.scrollY < 2500) {
+        this.visible = (elementY < 300);
+      } else if (elementY > 300) {
         this.visible = !this.visible;
       }
     },
