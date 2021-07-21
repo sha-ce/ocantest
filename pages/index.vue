@@ -4,9 +4,9 @@
     <div class="back1" id="back1">
     </div>
     <AboutC3/>
-    <MyMessage/>
     <div class="back2" id="back2">
     </div>
+    <MyMessage/>
     <div class="back3" id="back3">
     </div>
     <div class="back4" id="back4">
