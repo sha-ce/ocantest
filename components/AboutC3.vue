@@ -52,8 +52,8 @@ export default ({
         elementY: elementY
       });
       if (!this.visible) {
-        this.visible = (elementY < 300);
-      } else if (elementY > 300) {
+        this.visible = (elementY < window.innerHeight);
+      } else if (elementY > window.innerHeight) {
         this.visible = !this.visible;
       }
     },
@@ -66,7 +66,7 @@ export default ({
 /* animation */
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 2s ease;
+  transition: all 3s ease;
 }
 .fade-enter, .fade-leave-to {
   transform: translateY(10%);
